@@ -1,110 +1,161 @@
 /* Estilo general de la aplicación */
 .App {
-  background-color: #1f1f1f; /* Fondo gris oscuro */
-  min-height: 100vh; /* Ocupar toda la altura de la pantalla */
-  color: white; /* Texto blanco */
-  font-family: Arial, sans-serif; /* Fuente moderna y minimalista */
+  background-color: #1f1f1f;
+  min-height: 100vh;
+  color: white;
+  font-family: Arial, sans-serif;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrar contenido horizontalmente */
-  justify-content: flex-start; /* Alinear al inicio verticalmente */
+  align-items: center;
+  justify-content: flex-start;
 }
 
 /* Título centrado */
 h1 {
-  text-align: center; /* Asegurar que el texto del título esté centrado */
-  margin-bottom: 20px; /* Espacio debajo del título */
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Agregar margen superior para mover el formulario hacia abajo */
+/* Estilo del formulario */
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  margin-top: 50px; /* Mover el formulario más abajo */
+  gap: 15px;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 600px; /* Ajustar ancho máximo del formulario */
 }
 
-/* Estilo del contenedor de cada campo */
-form div {
+/* Grupo de cada campo */
+.form-group {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  width: 500px; /* Ancho más grande para los campos */
 }
 
 /* Estilo de los campos de entrada y select */
 select,
 input[type="text"] {
-  background-color: #3a3a3a; /* Color gris para los campos */
-  color: white; /* Letras blancas */
-  border: 1px solid #666; /* Borde gris */
+  background-color: #3a3a3a;
+  color: white;
+  border: 1px solid #666;
   border-radius: 5px;
   padding: 10px;
-  width: 100%; /* Asegurar que ocupen todo el contenedor */
   box-sizing: border-box;
   font-size: 16px;
+  width: 100%; /* Ambos campos ocupan el 100% del contenedor */
 }
 
 /* Contenedor de botones */
 .button-container {
   display: flex;
-  gap: 10px; /* Separación entre botones */
-  margin-top: 20px; /* Espacio adicional debajo de los campos */
+  flex-direction: column; /* Botones en columna */
+  width: 100%; /* Ancho igual que los campos */
+  gap: 10px;
 }
 
 /* Estilo del botón de buscar */
 button {
-  background-color: #00c9ae; /* Color turquesa */
+  background-color: #00c9ae;
   color: rgb(54, 54, 54);
   border: none;
   border-radius: 5px;
-  padding: 10px 40px; /* Hacer el botón más largo */
+  padding: 10px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%; /* Botón ocupa todo el ancho del contenedor */
 }
 
-/* Cambiar color del botón al pasar el ratón */
 button:hover {
-  background-color: #00f7de; /* Color turquesa más oscuro */
+  background-color: #00f7de;
 }
 
 /* Estilo del botón de limpiar */
 .btn-limpiar {
-  background-color: #eeffcf; /* Color rojo */
-  color: rgb(54, 54, 54); /* Texto blanco */
+  background-color: #eeffcf;
+  color: rgb(54, 54, 54);
 }
 
-/* Cambiar color del botón limpiar al pasar el ratón */
 .btn-limpiar:hover {
-  background-color: #faffe8; /* Rojo más oscuro */
+  background-color: #faffe8;
 }
 
-/* Estilo del mensaje de error centrado */
+/* Estilo del mensaje de error */
 p {
-  color: #d3a4d3; /* Mensajes en magenta */
+  color: #d3a4d3;
   font-weight: bold;
-  text-align: center; /* Centrar el mensaje */
+  text-align: center;
 }
 
-/* Estilo de los resultados centrados */
+/* Estilo de los resultados */
 .resultado {
   margin-top: 20px;
   padding: 20px;
-  background-color: #333; /* Fondo gris más claro para el contenedor de resultados */
+  background-color: #333;
   border-radius: 10px;
   width: 100%;
   max-width: 600px;
-  text-align: center; /* Centrar el contenido */
+  text-align: center;
 }
 
 /* Estilo del enlace de la norma */
 .resultado a {
-  color: #00bfa5; /* Enlaces turquesa */
+  color: #00bfa5;
   text-decoration: none;
 }
 
 .resultado a:hover {
-  text-decoration: underline; /* Subrayar enlace al pasar el ratón */
+  text-decoration: underline;
+}
+
+/* Estilos para dispositivos móviles y pantallas estrechas */
+@media (max-width: 768px) {
+  form {
+    max-width: 90%; /* Ajustar el ancho del formulario */
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .button-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  select,
+  input[type="text"] {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .resultado {
+    width: 100%;
+  }
+}
+
+/* Estilos para pantallas más pequeñas (como móviles) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  select,
+  input[type="text"] {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .resultado {
+    font-size: 14px;
+  }
 }
