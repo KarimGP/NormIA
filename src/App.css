@@ -1,38 +1,110 @@
+/* Estilo general de la aplicación */
 .App {
-  text-align: center;
+  background-color: #1f1f1f; /* Fondo gris oscuro */
+  min-height: 100vh; /* Ocupar toda la altura de la pantalla */
+  color: white; /* Texto blanco */
+  font-family: Arial, sans-serif; /* Fuente moderna y minimalista */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar contenido horizontalmente */
+  justify-content: flex-start; /* Alinear al inicio verticalmente */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Título centrado */
+h1 {
+  text-align: center; /* Asegurar que el texto del título esté centrado */
+  margin-bottom: 20px; /* Espacio debajo del título */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Agregar margen superior para mover el formulario hacia abajo */
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  margin-top: 50px; /* Mover el formulario más abajo */
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilo del contenedor de cada campo */
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 500px; /* Ancho más grande para los campos */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilo de los campos de entrada y select */
+select,
+input[type="text"] {
+  background-color: #3a3a3a; /* Color gris para los campos */
+  color: white; /* Letras blancas */
+  border: 1px solid #666; /* Borde gris */
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%; /* Asegurar que ocupen todo el contenedor */
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Contenedor de botones */
+.button-container {
+  display: flex;
+  gap: 10px; /* Separación entre botones */
+  margin-top: 20px; /* Espacio adicional debajo de los campos */
+}
+
+/* Estilo del botón de buscar */
+button {
+  background-color: #00c9ae; /* Color turquesa */
+  color: rgb(54, 54, 54);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 40px; /* Hacer el botón más largo */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambiar color del botón al pasar el ratón */
+button:hover {
+  background-color: #00f7de; /* Color turquesa más oscuro */
+}
+
+/* Estilo del botón de limpiar */
+.btn-limpiar {
+  background-color: #eeffcf; /* Color rojo */
+  color: rgb(54, 54, 54); /* Texto blanco */
+}
+
+/* Cambiar color del botón limpiar al pasar el ratón */
+.btn-limpiar:hover {
+  background-color: #faffe8; /* Rojo más oscuro */
+}
+
+/* Estilo del mensaje de error centrado */
+p {
+  color: #d3a4d3; /* Mensajes en magenta */
+  font-weight: bold;
+  text-align: center; /* Centrar el mensaje */
+}
+
+/* Estilo de los resultados centrados */
+.resultado {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #333; /* Fondo gris más claro para el contenedor de resultados */
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center; /* Centrar el contenido */
+}
+
+/* Estilo del enlace de la norma */
+.resultado a {
+  color: #00bfa5; /* Enlaces turquesa */
+  text-decoration: none;
+}
+
+.resultado a:hover {
+  text-decoration: underline; /* Subrayar enlace al pasar el ratón */
 }
