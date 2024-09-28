@@ -61,18 +61,20 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Encuentra la norma UNE</h1>
+      <h1>Encuentra la norma UNE con IA</h1>
       <form>
         {/* Campo Select sin label, solo con placeholder */}
         <div>
           <select value={ramo} onChange={handleRamoChange}>
             <option value="">Selecciona un ramo</option>
-            <option value="Fontanería">Fontanería</option>
+            <option value="Albañilería">Albañilería</option>
             <option value="Carpintería de Madera">Carpintería de Madera</option>
             <option value="Carpintería de Aluminio">Carpintería de Aluminio</option>
-            <option value="Albañilería">Albañilería</option>
-            <option value="Pintura">Pintura</option>
             <option value="Electricidad">Electricidad</option>
+            <option value="Fontanería">Fontanería</option>
+            <option value="Parquet">Parquet</option>
+            <option value="Pintura">Pintura</option>
+
           </select>
         </div>
 
